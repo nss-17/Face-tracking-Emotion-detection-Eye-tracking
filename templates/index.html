@@ -1,0 +1,93 @@
+<head>
+    <style>
+        /* Your existing styles here */
+
+        #video-container {
+            position: fixed;
+            bottom: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            width: 20%; /* Adjust the width to make the video smaller */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #video-feed{
+            width: 100%;
+            height: auto; /* Maintain the aspect ratio */
+            display: block;
+        }
+
+        #preloaded-video-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        #preloaded-video {
+            width: 100%; /* Adjust the width of the preloaded video */
+            max-width: 800px; /* Set a maximum width for responsiveness */
+            height: auto; /* Maintain the aspect ratio */
+            border: 2px solid #fff; /* Add a border for visibility */
+        }
+
+        #hide-video-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 2;
+        }
+    </style>
+
+    <script>
+        function toggleVideoVisibility() {
+            var video = document.getElementById("video-feed");
+            
+            if (video.style.display === "none") {
+                video.style.display = "block";
+            } else {
+                video.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h2 class="mt-5">Project</h2>
+                <form method="post" action="{{ url_for('tasks') }}">
+                    <input type="submit" value="Start/Stop Recording" name="rec" />
+                </form>
+
+                <!-- Add the new button to navigate to the information input page
+                <a href="{{ url_for('input_info') }}" >Input Information</a> -->
+                
+                <div id="preloaded-video-container">
+                    <video id="preloaded-video" controls>
+                        <source src="preload_video/preload_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div id="video-container">
+                    <button id="hide-video-btn" onclick="toggleVideoVisibility()">Toggle Video</button>
+                    <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+                </div>
+
+                <!-- <h3 style="font-family: courier;">Instructions:</h3>
+                <ol style="font-family: courier;">
+                    <li>Start/Stop Recording--Toggle between starting and stopping video recording</li>
+                </ol> -->
+            </div>
+        </div>
+    </div>
+</body>

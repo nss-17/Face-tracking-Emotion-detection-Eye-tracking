@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title> Result page </title>
+    </head>
+<body>
+    <h1> Result page </h1>
+    <img id = "bg" src="{{url_for('views.result_video')}}" >
+
+    <!-- Add a button to go to the result text page -->
+    <form action="{{ url_for('views.result_text') }}" method="get">
+        <button type="submit">Go to Result Text Page</button>
+    </form>
+</body>
+</html> 
