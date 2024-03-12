@@ -1,7 +1,7 @@
 (English below)
 Project môn học (Project_report.pdf)
 
-Nghiên cứu hệ thống face tracking và eye tracking cảnh báo người dùng điện thoại là trẻ em có nguy cơ tự kỷ và mắc các vấn đề về mắt.
+Nghiên cứu hệ thống face tracking, emotion detection và eye tracking cảnh báo người dùng điện thoại là trẻ em có nguy cơ tự kỷ và mắc các vấn đề về mắt.
 
 Các vấn đề cần nghiên cứu:									
 
@@ -22,7 +22,7 @@ Mục đích:	Hỗ trợ sàng lọc và phát hiện sớm các dấu hiệu b�
 
 Subject project (Project_report.pdf)
 
-Research on face tracking and eye tracking systems warns that child phone users are at risk of autism and eye problems.
+Research on face tracking, emotion detection and eye tracking systems warns that child phone users are at risk of autism and eye problems.
 
 Issues that need to be researched:
 
